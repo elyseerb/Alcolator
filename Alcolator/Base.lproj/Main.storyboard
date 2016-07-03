@@ -19,12 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="???" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zE5-jE-nys">
-                                <rect key="frame" x="113" y="289" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="% Alcohol Content per Beer" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVs-ZZ-XQ4">
                                 <rect key="frame" x="20" y="28" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -33,24 +27,32 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="ak9-K7-m7B">
                                 <rect key="frame" x="18" y="66" width="564" height="31"/>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acP-4c-efQ">
-                                <rect key="frame" x="224" y="104" width="152" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acP-4c-efQ">
+                                <rect key="frame" x="35" y="104" width="545" height="45"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <state key="normal" title="Calculate!">
                                     <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="???" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zE5-jE-nys">
+                                <rect key="frame" x="35" y="157" width="545" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="zE5-jE-nys" firstAttribute="width" secondItem="acP-4c-efQ" secondAttribute="width" id="3Qf-q8-vre"/>
                             <constraint firstItem="acP-4c-efQ" firstAttribute="top" secondItem="ak9-K7-m7B" secondAttribute="bottom" constant="8" id="7oS-hg-2tv"/>
                             <constraint firstItem="ak9-K7-m7B" firstAttribute="top" secondItem="LVs-ZZ-XQ4" secondAttribute="bottom" constant="8" id="Adm-6t-fKg"/>
                             <constraint firstItem="acP-4c-efQ" firstAttribute="leading" secondItem="ak9-K7-m7B" secondAttribute="leading" constant="15" id="D3g-zC-HIh"/>
                             <constraint firstItem="ak9-K7-m7B" firstAttribute="top" secondItem="LVs-ZZ-XQ4" secondAttribute="bottom" constant="8" id="Pec-pt-nOQ"/>
                             <constraint firstItem="ak9-K7-m7B" firstAttribute="width" secondItem="LVs-ZZ-XQ4" secondAttribute="height" multiplier="19:5" id="T8A-3p-CeU"/>
                             <constraint firstItem="ak9-K7-m7B" firstAttribute="top" secondItem="LVs-ZZ-XQ4" secondAttribute="bottom" constant="8" id="TmY-70-ire"/>
+                            <constraint firstItem="zE5-jE-nys" firstAttribute="width" secondItem="acP-4c-efQ" secondAttribute="width" id="aX7-we-u59"/>
                             <constraint firstAttribute="leadingMargin" secondItem="LVs-ZZ-XQ4" secondAttribute="leading" id="rhH-Gr-4Uf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LVs-ZZ-XQ4" secondAttribute="trailing" id="s4z-wI-NVj"/>
                             <constraint firstItem="ak9-K7-m7B" firstAttribute="width" secondItem="LVs-ZZ-XQ4" secondAttribute="width" id="sF8-uv-4UZ"/>
@@ -63,6 +65,7 @@
                                 <exclude reference="Adm-6t-fKg"/>
                                 <exclude reference="Pec-pt-nOQ"/>
                                 <exclude reference="T8A-3p-CeU"/>
+                                <exclude reference="3Qf-q8-vre"/>
                             </mask>
                         </variation>
                         <connections>
@@ -73,7 +76,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="AZs-mU-jfQ"/>
             </objects>
-            <point key="canvasLocation" x="380" y="311"/>
+            <point key="canvasLocation" x="342" y="285"/>
         </scene>
     </scenes>
 </document>
