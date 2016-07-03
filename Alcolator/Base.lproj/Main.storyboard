@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="???" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zE5-jE-nys">
+                                <rect key="frame" x="113" y="289" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="% Alcohol Content per Beer" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVs-ZZ-XQ4">
+                                <rect key="frame" x="20" y="28" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="ak9-K7-m7B">
+                                <rect key="frame" x="18" y="66" width="564" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acP-4c-efQ">
+                                <rect key="frame" x="224" y="104" width="152" height="30"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <state key="normal" title="Calculate!">
+                                    <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="acP-4c-efQ" firstAttribute="top" secondItem="ak9-K7-m7B" secondAttribute="bottom" constant="8" id="7oS-hg-2tv"/>
+                            <constraint firstItem="ak9-K7-m7B" firstAttribute="top" secondItem="LVs-ZZ-XQ4" secondAttribute="bottom" constant="8" id="Adm-6t-fKg"/>
+                            <constraint firstItem="acP-4c-efQ" firstAttribute="leading" secondItem="ak9-K7-m7B" secondAttribute="leading" constant="15" id="D3g-zC-HIh"/>
+                            <constraint firstItem="ak9-K7-m7B" firstAttribute="top" secondItem="LVs-ZZ-XQ4" secondAttribute="bottom" constant="8" id="Pec-pt-nOQ"/>
+                            <constraint firstItem="ak9-K7-m7B" firstAttribute="width" secondItem="LVs-ZZ-XQ4" secondAttribute="height" multiplier="19:5" id="T8A-3p-CeU"/>
+                            <constraint firstItem="ak9-K7-m7B" firstAttribute="top" secondItem="LVs-ZZ-XQ4" secondAttribute="bottom" constant="8" id="TmY-70-ire"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="LVs-ZZ-XQ4" secondAttribute="leading" id="rhH-Gr-4Uf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LVs-ZZ-XQ4" secondAttribute="trailing" id="s4z-wI-NVj"/>
+                            <constraint firstItem="ak9-K7-m7B" firstAttribute="width" secondItem="LVs-ZZ-XQ4" secondAttribute="width" id="sF8-uv-4UZ"/>
+                            <constraint firstItem="acP-4c-efQ" firstAttribute="trailing" secondItem="ak9-K7-m7B" secondAttribute="trailing" id="vom-ca-Sfd"/>
+                            <constraint firstItem="ak9-K7-m7B" firstAttribute="centerX" secondItem="LVs-ZZ-XQ4" secondAttribute="centerX" id="z8r-hu-xKD"/>
+                            <constraint firstItem="LVs-ZZ-XQ4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="zUr-ez-LkJ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Adm-6t-fKg"/>
+                                <exclude reference="Pec-pt-nOQ"/>
+                                <exclude reference="T8A-3p-CeU"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="AZs-mU-jfQ" appends="YES" id="CYI-9N-nub"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="AZs-mU-jfQ"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="311"/>
+        </scene>
+    </scenes>
+</document>
