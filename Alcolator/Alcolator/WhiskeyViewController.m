@@ -55,18 +55,21 @@
     NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
     //first, caculate how much alcohol is in all those beers...
-    int numberOfBeers = self.beerCountSlider.value;
-    int ouncesInOneBeerGlass = 12; //assume they are 12oz beer bottles
-    float alcoholPercentageOfBeer = [self.beerPercentTextField.text floatValue] /100;
-    float ouncesOfAlcoholPerBeer = ouncesInOneBeerGlass *alcoholPercentageOfBeer;
-    float ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer * numberOfBeers;
-    //now, calculate the equivalent amount of whiskey...
-    float ouncesInOneWhiskeyGlass = 1;  // a 1oz shot
-    float alcoholPercentageOfWhiskey = 0.4;  // 40% is average
-    float ouncesOfAlcoholPerWhiskeyGlass = ouncesInOneWhiskeyGlass * alcoholPercentageOfWhiskey;
-    float numberOfWhiskeyGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWhiskeyGlass;
     
-    self.navigationItem.title = [NSString stringWithFormat:@"Whiskey (%f) shots",numberOfWhiskeyGlassesForEquivalentAlcoholAmount];
+    //int numberOfBeers = self.beerCountSlider.value;
+    //int ouncesInOneBeerGlass = 12; //assume they are 12oz beer bottles
+    //float alcoholPercentageOfBeer = [self.beerPercentTextField.text floatValue] /100;
+    //float ouncesOfAlcoholPerBeer = ouncesInOneBeerGlass *alcoholPercentageOfBeer;
+    //float ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer * numberOfBeers;
+    
+    //now, calculate the equivalent amount of whiskey...
+    
+    //float ouncesInOneWhiskeyGlass = 1;  // a 1oz shot
+    //float alcoholPercentageOfWhiskey = 0.4;  // 40% is average
+    //float ouncesOfAlcoholPerWhiskeyGlass = ouncesInOneWhiskeyGlass * alcoholPercentageOfWhiskey;
+    //float numberOfWhiskeyGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWhiskeyGlass;
+    
+    //self.navigationItem.title = [NSString stringWithFormat:@"Whiskey (%f) shots",numberOfWhiskeyGlassesForEquivalentAlcoholAmount];
 }
 
 
