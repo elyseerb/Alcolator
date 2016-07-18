@@ -2,7 +2,7 @@
 //  WhiskeyViewController.m
 //  Alcolator
 //
-//  Created by Elyse Erb on 7/3/16.
+//  Created by Elyse Erb on 7/17/16.
 //  Copyright © 2016 Bloc. All rights reserved.
 //
 
@@ -19,14 +19,14 @@
     [self.beerPercentTextField resignFirstResponder];
     
     int numberOfBeers = self.beerCountSlider.value;
-    int ouncesInOneBeerGlass = 12; //assume they are 12oz beer bottles
+    int ouncesInOneBeerGlass = 12;  //assume they are 12oz beer bottles
     
     float alcoholPercentageOfBeer = [self.beerPercentTextField.text floatValue] / 100;
     float ouncesOfAlcoholPerBeer = ouncesInOneBeerGlass * alcoholPercentageOfBeer;
     float ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer * numberOfBeers;
     
-    float ouncesInOneWhiskeyGlass = 1; //a 1oz shot
-    float alcoholPercentageOfWhiskey = 0.4; //40% is average
+    float ouncesInOneWhiskeyGlass = 1;  // a 1oz shot
+    float alcoholPercentageOfWhiskey = 0.4;  // 40% is average
     
     float ouncesOfAlcoholPerWhiskeyGlass = ouncesInOneWhiskeyGlass * alcoholPercentageOfWhiskey;
     float numberOfWhiskeyGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWhiskeyGlass;
@@ -36,7 +36,7 @@
     if (numberOfBeers == 1) {
         beerText = NSLocalizedString(@"beer", @"singular beer");
     } else {
-        beerText = NSLocalizedString(@"beers", @"plural of beers");
+        beerText = NSLocalizedString(@"beers", @"plural of beer");
     }
     
     NSString *whiskeyText;
@@ -47,7 +47,7 @@
         whiskeyText = NSLocalizedString(@"shots", @"plural of shot");
     }
     NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@ of whiskey.", nil), numberOfBeers, beerText, [self.beerPercentTextField.text floatValue], numberOfWhiskeyGlassesForEquivalentAlcoholAmount, whiskeyText];
-    self.Labelresult.text = resultText;
+    self.resultLabel.text = resultText;
 }
 
 @end
